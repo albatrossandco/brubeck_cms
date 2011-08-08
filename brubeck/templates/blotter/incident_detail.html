@@ -5,39 +5,51 @@
 
 {% block head_extras %}
 <meta name="robots" content="noindex, nofollow" />
-{% add_gmap_api %}
-<script type="text/javascript" src="/media/style/2009-01/js/mapstraction.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
 <script type="text/javascript">
-$(function() {
+$(document).ready(function() {
     // First create a div to host the map
-    var themap = $('<div id="map_box"></div>').css({
-        'width': '300px',
-        'height': '300px',
+    $('#place_list').before('<div id="map_box"></div>');
+    $('#map_box').css({
+        'width': '296px',
+        'height': '296px',
         'border': '1px solid #000'
-    }).insertBefore('div#incident_info');
+    });
     
     // Now initialize the map
-    var mapstraction = new Mapstraction('map_box', 'google');
-    mapstraction.addControls({
-        zoom: 'small',
-        map_type: false
+    var map = new google.maps.Map(document.getElementById('map_box'), {
+        // Requires an initial center and zoom even though we're going to
+        // change it in the fitBounds() line right after all of this
+        center: new google.maps.LatLng(38.942776, -92.326891),
+        zoom: 12,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.TOP_LEFT
+        }
     });
+    map.fitBounds(new google.maps.LatLngBounds(new google.maps.LatLng({{ blotter_map.extents.min_lat }}, {{ blotter_map.extents.min_lng }}), new google.maps.LatLng({{ blotter_map.extents.max_lat }}, {{ blotter_map.extents.max_lng }})));
     
     // Extract the coordinates and add a marker
     $('.vcard').each(function() {
         var hcard = $(this);
         var latitude = hcard.find('.geo .latitude').text();
         var longitude = hcard.find('.geo .longitude').text();
-        var incidentPoint = new LatLonPoint(latitude, longitude);
-        // Set center and zoom
-        mapstraction.setCenterAndZoom(incidentPoint, 15);
-        var marker = new Marker(incidentPoint);
-        marker.setInfoBubble(
-            '<div class="bubble">' + hcard.html() + '</div>'
-        );
-        var marker_icon = hcard.find('.note .marker_url').text();
-        marker.setIcon(marker_icon);
-        mapstraction.addMarker(marker);
+        map.setCenter(new google.maps.LatLng(latitude, longitude));
+        map.setZoom(15);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(latitude, longitude),
+            map: map,
+            icon: hcard.find('.note .marker_url').text()
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: '<div class="bubble">' + hcard.html() + '</div>'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
     });
 });
 </script>

@@ -10,41 +10,48 @@
 <meta name="description" content="{% if article.cdeck %}{{ article.cdeck }}{% else %}{{ article.body|striptags|truncatewords:"20" }}{% endif %}" />
 <link rel="alternate" type="application/rss+xml" title="{{ article.section.name }} RSS Feed" href="/feeds/sections/{{ article.section.slug }}/" />
 {% if map_data %}
-    {% comment %}Start mapping scripts{% endcomment %}
-    {% add_gmap_api %}
-    <script type="text/javascript" src="/media/style/2009-01/js/mapstraction.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
     <script type="text/javascript">
-    $(function() {
+    $(document).ready(function() {
         // First create a div to host the map
-        var themap = $('<div id="map_box"></div>').css({
+        $('#place_list').before('<div id="map_box"></div>');
+        $('#map_box').css({
             'width': '300px',
             'height': '300px',
             'border': '1px solid #000'
-        }).insertBefore('ul#place_list');
-        
-        // Now initialize the map
-        var mapstraction = new Mapstraction('map_box', 'google');
-        mapstraction.addControls({
-            zoom: 'small',
-            map_type: true
         });
         
-        bounds = new BoundingBox({{ map_data.extents.min_lat }}, {{ map_data.extents.min_lng }}, {{ map_data.extents.max_lat }}, {{ map_data.extents.max_lng }});
-        
-        // Set center and zoom
-        mapstraction.setBounds(bounds);
+        // Now initialize the map
+        var map = new google.maps.Map(document.getElementById('map_box'), {
+            // Requires an initial center and zoom even though we're going to
+            // change it in the fitBounds() line right after all of this
+            center: new google.maps.LatLng(38.942776, -92.326891),
+            zoom: 12,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL,
+                position: google.maps.ControlPosition.TOP_LEFT
+            }
+        });
+        map.fitBounds(new google.maps.LatLngBounds(new google.maps.LatLng({{ map_data.extents.min_lat }}, {{ map_data.extents.min_lng }}), new google.maps.LatLng({{ map_data.extents.max_lat }}, {{ map_data.extents.max_lng }})));
         
         // Extract the coordinates and add a marker
         $('.vcard').each(function() {
             var hcard = $(this);
             var latitude = hcard.find('.geo .latitude').text();
             var longitude = hcard.find('.geo .longitude').text();
-            var marker = new Marker(new LatLonPoint(latitude, longitude));
-            marker.setInfoBubble(
-                '<div class="bubble">' + hcard.html() + '</div>'
-            );
-            // marker.setIcon('url');
-            mapstraction.addMarker(marker);
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(latitude, longitude),
+                map: map
+            });
+            var infowindow = new google.maps.InfoWindow({
+                content: '<div class="bubble">' + hcard.html() + '</div>'
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
         });
     });
     </script>

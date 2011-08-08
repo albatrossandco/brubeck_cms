@@ -1,39 +1,45 @@
-{% load mapping %}
-    {% comment %}Start mapping scripts{% endcomment %}
-    {% add_gmap_api %}
-    <script type="text/javascript" src="/media/style/2009-01/js/mapstraction.js"></script>
-    <script type="text/javascript">
-    $(function() {
-        // First create a div to host the map
-        var themap = $('<div id="map_box"></div>').css({
-            'width': '{{ width }}px',
-            'height': '{{ height }}px',
-            'border': '1px solid #000'
-        }).insertBefore('ul#place_list');
-
-        // Now initialize the map
-        var mapstraction = new Mapstraction('map_box', 'google');
-        mapstraction.addControls({
-            zoom: 'small',
-            map_type: true
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    // First create a div to host the map
+    $('#place_list').before('<div id="map_box"></div>');
+    $('#map_box').css({
+        'width': '{{ width }}px',
+        'height': '{{ height }}px',
+        'border': '1px solid #000'
+    });
+    
+    // Now initialize the map
+    var map = new google.maps.Map(document.getElementById('map_box'), {
+        // Requires an initial center and zoom even though we're going to
+        // change it in the fitBounds() line right after all of this
+        center: new google.maps.LatLng(38.942776, -92.326891),
+        zoom: 12,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        zoomControl: true,
+        zoomControlOptions: {
+            style: google.maps.ZoomControlStyle.SMALL,
+            position: google.maps.ControlPosition.TOP_LEFT
+        }
+    });
+    map.fitBounds(new google.maps.LatLngBounds(new google.maps.LatLng({{ extents.min_lat }}, {{ extents.min_lng }}), new google.maps.LatLng({{ extents.max_lat }}, {{ extents.max_lng }})));
+    
+    // Extract the coordinates and add a marker
+    $('.vcard').each(function() {
+        var hcard = $(this);
+        var latitude = hcard.find('.geo .latitude').text();
+        var longitude = hcard.find('.geo .longitude').text();
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(latitude, longitude),
+            map: map
         });
-
-	bounds = new BoundingBox({{ extents.min_lat }}, {{ extents.min_lng }}, {{ extents.max_lat }}, {{ extents.max_lng }});
-
-        // Set center and zoom
-        mapstraction.setBounds(bounds);
-
-        // Extract the coordinates and add a marker
-        $('.vcard').each(function() {
-            var hcard = $(this);
-            var latitude = hcard.find('.geo .latitude').text();
-            var longitude = hcard.find('.geo .longitude').text();
-            var marker = new Marker(new LatLonPoint(latitude, longitude));
-            marker.setInfoBubble(
-                '<div class="bubble">' + hcard.html() + '</div>'
-            );
-            // marker.setIcon('url');
-            mapstraction.addMarker(marker);
+        var infowindow = new google.maps.InfoWindow({
+            content: '<div class="bubble">' + hcard.html() + '</div>'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
         });
     });
-   </script>
+});
+</script>
