@@ -35,7 +35,7 @@ class Book(ContentChannel):
 class Entry(models.Model):
     book = models.ManyToManyField(Book)
     justification = models.TextField(blank=True, null=True)
-###    mistaken_values = models.TextField()
+    # mistaken_values = models.TextField()
     order_by = models.CharField(max_length=1)
     slug = models.SlugField()
     tags = models.ManyToManyField(Tag, blank=True, null=True, related_name='docs_entry_set')
@@ -43,7 +43,7 @@ class Entry(models.Model):
     title = models.CharField(max_length=400)
 
     class Meta:
-        verbose_name_plural = 'Entries'
+        verbose_name_plural = 'entries'
 
     def __unicode__(self):
         return self.title
