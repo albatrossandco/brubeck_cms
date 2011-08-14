@@ -17,7 +17,7 @@ class StafferAdmin(admin.ModelAdmin):
             'fields': ('slug',)
         })
     )
-    inlines = (TenureInline)
+    inlines = (TenureInline,)
     list_display = ('last_name', 'first_name', 'middle_name', 'email')
 admin.site.register(Staffer, StafferAdmin)
 
