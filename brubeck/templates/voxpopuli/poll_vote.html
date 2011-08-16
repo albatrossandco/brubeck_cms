@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ block.super }} &mdash; {{ poll.question }}{% endblock title %}
+
+{% block content %}
+<h1>{{ poll.question }}</h1>
+<form action="{% url voxpopuli-poll-vote id=poll.id %}" method="POST">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Vote" />
+</form>
+{% endblock content %}

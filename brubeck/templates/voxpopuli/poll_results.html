@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ block.super }} &mdash; {{ poll.question }}{% endblock title %}
+
+{% block content %}
+<h1>{{ poll.question }}</h1>
+{% if already_voted %}<p class="already_voted">You've already voted in this poll.</p>{% endif %}
+<table id="poll_{{ poll.id }}">
+    {% for result in results %}
+    <tr>
+        <td class="poll_question">{{ result.choice }}</td>
+        <td class="poll_result">{{ result.num_votes }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

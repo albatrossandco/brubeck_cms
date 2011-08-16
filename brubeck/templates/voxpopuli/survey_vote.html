@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load markup %}
+
+{% block title %}{{ block.super }} &mdash; {{ survey.title }}{% endblock title %}
+
+{% block content %}
+<h1>{{ survey.title }}</h1>
+<form action="{% url voxpopuli-survey-vote slug=survey.slug %}" method="POST">
+{% csrf_token %}
+{% for question in questions %}
+<h2>{{ question.0.question }}</h2>
+{{ question.1.as_p }}
+{% endfor %}
+<input type="submit" value="vote" />
+</form>
+{% endblock content %}
