@@ -26,11 +26,11 @@ class ArticleAdmin(admin.ModelAdmin):
         }),
     )
     filter_horizontal = ('photos', 'editorial_cartoons', 'graphics', 'attached_files', 'videos', 'slideshows', 'audio_clips', 'podcast_episodes', 'tags', 'polls')
-    inlines = (CorrectionInline)
+    inlines = (CorrectionInline,)
     list_display = ('title', 'pub_date', 'section', 'is_published', 'priority')
     list_editable = ('priority', 'is_published')
     list_filter = ('is_published',)
     prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = ('byline',)
     search_fields = ('title', 'body', 'cdeck', 'blurb')
-admin.site.register(Article)
+admin.site.register(Article, ArticleAdmin)
