@@ -1,0 +1,262 @@
+/* General style things. */
+
+#ticker_and_search {
+	height: 21px;
+	overflow: hidden;
+}
+
+input#topsearchbox {
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border: 0px none;
+	margin-right: -2px;
+	padding: 3px 0px 3px 10px;
+	width: 156px;
+}
+
+input#topsearchsubmit {
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	background-color: #336633;
+	border: 0px none;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 2px 3px 2px 0px;
+	width: 52px;
+}
+
+#other_media {
+	margin-top:  1px;
+	width: 70px;
+}
+
+#nav_bar {
+	background-color: #336633;
+	border-bottom: 1px solid #114411;
+	border-top: 1px solid #114411;
+	margin:  9px 0px 0px;
+	padding-left: 10px;
+	width: 955px;
+}
+
+#nav_bar ul li a {
+	color: #FFFFFF;
+	padding: 5px 6px;
+}
+
+#nav_bar ul li a:hover, #nav_bar ul li:hover {
+	background-color: #114411;
+}
+
+#nav_bar ul li.nav_move a:hover, #nav_bar ul li.nav_move:hover {
+	background-color: #882277;
+}
+
+#locations ul, #locations1 ul, #locations2 ul, #locations3 ul {
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+#locations li, #locations1 li, #locations2 li, #locations3 li {
+	padding-bottom: 5px;
+}
+
+h2.section {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #555555;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding: 6px 10px 3px;
+}
+
+h2.section a {
+	color: #FFFFFF;
+}
+
+h2.section a:hover {
+	color: #CCCCCC;
+}
+
+h2.sectionmove {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #882277;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding: 6px 10px 3px;
+}
+
+h2.sectionmove a {
+	color: #FFFFFF;
+}
+
+h2.sectionmove a:hover {
+	color: #CCCCCC;
+}
+
+h2.sectionblack {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding: 6px 10px 3px;
+}
+
+h2.sectionblack a {
+	color: #FFFFFF;
+}
+
+h2.sectionblack a:hover {
+	color: #009830;
+}
+
+#categoryheader {
+	margin-bottom: 10px;
+}
+
+#categoryheader p {
+	display: inline;
+}
+
+#campusguidephoto {
+    border: 1px solid #BBBBBB;
+    margin: 0px 20px 15px;
+    padding: 5px;
+}
+
+#maps {
+	height: 400px;
+	overflow: hidden;
+}
+
+#map, #map1, #map2, #map3 {
+	background-color: #CCCCCC;
+	border-color: #666666;
+	border-style: solid;
+	border-width: 0px 1px;
+	padding: 0px 9px 10px 5px;
+	width: 674px;
+}
+
+.MapTab {
+	height: 420px;
+}
+
+.MapTab h3 {
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	background-color: #336633;
+	border-bottom: 1px solid #333333;
+	color: #CCCCCC;
+	height: 23px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+	margin-top: 0px;
+	padding-top: 9px;
+	width: 690px;
+}
+
+.MapTab h3 span {
+	color: #DEDEDE;
+	padding: 0px 10px;
+}
+
+.MapTab h3 span.active {
+    -moz-border-radius-topleft: 8px;
+	-moz-border-radius-topright: 8px;
+	-webkit-border-top-left-radius: 8px;
+	-webkit-border-top-right-radius: 8px;
+	background-color: #CCCCCC;
+	border-color: #666666;
+	border-style: solid;
+	border-width: 1px 1px 0px;
+	color: #666666;
+	padding: 8px 10px;
+}
+
+.MapTab h3 a {
+	color: #FFFFFF;
+	padding: 6px 10px;
+}
+
+.MapTab h3 a:hover {
+	color: #CCCCCC;
+}
+
+.MapTab h3 .farleft {
+/*	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;*/
+}
+
+#maps .MapTab p#description {
+/*	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;*/
+	background-color: #CCCCCC;
+	border-color: #666666;
+	border-style: solid;
+	border-width: 1px 1px 0px;
+	color: #000000;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 10px;
+	padding: 5px 10px;
+}
+
+#map_box, #map_box_1, #map_box_2, #map_box_3 {
+	border: 1px solid #666666;
+	margin-bottom: 0px;
+}
+
+#map_nav {
+	/*border: 1px solid #000;
+	float: right;
+	margin: 0px 10px 10px;
+	padding: 10px 10px 5px;*/
+}
+
+#maps .MapTab p.morelink {
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	background-color: #CCCCCC;
+	border: 1px solid #666666;
+	margin: 5px 10px 5px 0;
+	padding-bottom: 10px;
+	padding-right: 9px;
+	text-align: right;
+	width: 679px;
+}
+
+p.calendar_list {
+	margin-bottom: 20px;
+}
+
+.object_list h3.headline {
+	padding-top: 5px;
+}
+
+#weather {
+	margin: 3px;
+}
+
+#weather h4 {
+	padding-top: 6px;
+}

@@ -1,0 +1,525 @@
+/* from the 960.gs framework's text.css */
+body {
+	font: 13px/1.3 Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+p, dl, hr, h1, h2, h3, h4, h5, h6, ol, ul, pre, table, address, fieldset {
+	margin-bottom: 10px;
+}
+
+/* general style (every page) */
+body {
+    background-color: #999;
+}
+a {
+    color: #363;
+    text-decoration: none;
+}
+a:hover {
+    color: #999;
+}
+a p {
+    display: inline;
+}
+img {
+    border: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 5px;
+}
+h1 {
+    font-size: 25px;
+}
+h1 p {
+    display: inline;
+}
+h2 {
+    font-size: 16px;
+}
+h3 {
+    font-size: 14px;
+}
+hr {
+    color: #fff;
+    background-color: #fff;
+    border-top: 1px dotted #009830;
+}
+.photo {
+    border: 1px solid #000;
+    margin: 5px;
+}
+.small_vert {
+    width: 100px;
+    float: right;
+    margin-left: 10px;
+}
+.small_horiz {
+    width: 140px;
+    float: right;
+}
+.big_vert {
+    float: right;
+    margin-left: 10px;
+}
+.big_horiz {
+    width: 300px;
+    margin-left: 0;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+#container {
+    background-color: #fff;
+    padding-right: 25px;
+    border: 1px solid #000;
+}
+#ticker_and_search {
+    background-color: #000;
+    color: #fff;
+    height: 21px;
+    margin-left: 0;
+	overflow: hidden;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 4px;
+}
+
+#ticker li {
+    list-style: none;
+    margin: 4px 0px 0px;
+    padding: 0;
+}
+#ticker a {
+    color: #fff;
+}
+#ticker a:hover {
+    color: #999;
+}
+
+#other_media {
+	margin-top: 1px;
+	width: 70px;
+}
+
+input#topsearchbox {
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	border: 0px none;
+	margin-right: -2px;
+	padding: 3px 0px 3px 10px;
+	width: 156px;
+}
+
+input#topsearchsubmit {
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	background-color: #336633;
+	border: 0px none;
+	color: #FFFFFF;
+	font-weight: bold;
+	padding: 2px 3px 2px 0px;
+	width: 52px;
+}
+
+
+#flag_bar {
+    margin-top: 10px;
+}
+#weather_image {
+    margin-left: 10px;
+}
+#weather {
+    text-align: right;
+}
+#weather p {
+    margin-top:0px;
+}
+#nav_bar {
+    border-top: 1px dotted #009830;
+    border-bottom: 4px solid #009830;
+    text-transform: uppercase;
+}
+#nav_bar ul {
+    list-style: none;
+}
+#nav_bar ul li {
+    float: left;
+    margin: 0;
+    font-weight: bold;
+}
+#nav_bar ul li a {
+    color: #000;
+    display: block;
+    padding: 5px;
+}
+#nav_bar ul li a:hover, #nav_bar ul li:hover {
+    background-color: #009830;
+    color: #fff;
+}
+#nav_bar ul li.nav_move a:hover, #nav_bar ul li.nav_move:hover {
+    background-color: #906;
+}
+#auth_links {
+    text-transform: none;
+    float: right;
+    position: relative;
+    top: 5px;
+}
+#auth_links a {
+    color: #000;
+}
+#auth_links a:hover {
+    color: #009830;
+}
+#content_wide {
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+    /* overflow: hidden; */
+}
+#content_nosidebar {
+    margin: 10px;
+}
+#content {
+    margin: 10px -10px 0 10px;
+}
+#content .ad {
+    padding-top: 20px;
+    border-top: 1px dotted #009830;
+    margin-right: 10px;
+}
+#content .ad img, #content .ad embed, #content.ad iframe {
+    margin-left: 116px;
+}
+#content p {
+    padding-right: 10px;
+}
+#content ul {
+    margin-left: 30px;
+    list-style: disc;
+}
+#content ol {
+    margin-left: 30px;
+    list-style: decimal;
+}
+.object_list ul {
+    list-style: none !important;
+    margin-left: 0px !important;
+}
+#content blockquote {
+    margin: auto 20px;
+}
+#sidebar {
+    padding-left: 10px;
+    margin: 10px -10px 0 10px;
+    padding-bottom: 10px;
+    border-left: 1px dotted #009830;
+}
+#sidebar .ad {
+    margin-left: 50px;
+}
+#other_info {
+    padding: 0;
+    border-bottom: 1px dotted #009830;
+    margin-bottom: 10px;
+}
+#other_info p {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+#ad_bar {
+    height: 70px;
+}
+
+li.issue_front_thumb .photo {
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#footer {
+    text-align: right;
+    background-color: #000;
+    color: #ccc;
+    padding-left: 15px;
+    padding-top: 10px;
+    margin-left: 0;
+    padding-right: 10px;
+}
+#footer ul {
+    list-style: none;
+    float: right;
+    margin-left: 5px;
+}
+#footer li {
+    margin: 0;
+    padding: 0 5px;
+    border-left: 1px solid #ccc;
+    float: left;
+}
+#footer li.first {
+    border-left: 0;
+}
+#footer a {
+    color: #ccc;
+}
+#footer a:hover {
+    color: #999;
+}
+
+.cdeck {
+    font-style: italic;
+}
+.object_list .cdeck {
+    font-style: normal;
+}
+.byline {
+    font-weight: bold;
+    margin: 0 auto;
+}
+.item .byline {
+    font-weight: normal;
+    margin-top: -5px;
+    font-size: 8pt;
+}
+.pub_date {
+    margin-top: 0;
+}
+
+.object_list {
+    clear: left;
+}
+.object_list .header {
+    border-bottom: 1px dotted #999;
+    float: none;
+    margin-right: 10px;
+}
+.object_list .header .month {
+	float: left;
+}
+.object_list .header .calendar_link {
+	float: right;
+}
+.object_list .header .float_clearer {
+	float: none;
+	height: 21px;
+	width: 1px;
+}
+.object_list .item {
+    margin-left: 10px;
+    clear: left;
+}
+.object_list .item img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.page_navigation {
+    margin: 20px 0;
+    clear: left;
+}
+.photo_container {
+    width: 300px;
+}
+.photo_container img, .wide_photo_container img {
+    display: block;
+    float: none !important;
+}
+.photo_container p, .wide_photo_container p {
+    display: inline;
+    font-size: 8pt;
+}
+.photo_container .byline, .wide_photo_container .byline {
+    font-style: italic;
+    font-weight: bold;
+    border-right: 2px solid #000;
+    padding-right: 5px !important;
+    margin-right: 5px;
+}
+
+/* news bursts */
+#news_bursts {
+    /* color: #fff; */
+    color: #000;
+    margin-bottom: 10px;
+    /* background-color: #333; */
+    background-color: #fff;
+    /*
+        yeah, IE users don't get the rounded corners. it's mean of me to say, 
+        but something this trivial (rounded corners) for something this specific
+        (news bursts) just doesn't seem worth it to me as far as supporting IE. 
+        the only downside for them is that they get a normal rectangular box, 
+        really. they're not even half our visits, anyway. (49%, yes, but still.)
+    */
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border: 1px solid #000;
+}
+#news_bursts ul {
+    margin: 0;
+    padding: 0;
+}
+#news_bursts ul li {
+    list-style: none;
+    margin: 0;
+    padding: 5px 10px;
+}
+#news_bursts h1 {
+    font-size: 16px;
+    display: inline;
+    padding-right: 10px;
+    /* color: #999; */
+    color: #000;
+}
+#news_bursts p {
+    display: inline;
+}
+/* #news_bursts a {
+    color: #666;
+}
+#news_bursts a:hover {
+    color: #999;
+} */
+
+/* the front page */
+.fp_row {
+    margin-top: 10px;
+    border-bottom: 1px dotted #009830;
+    padding-bottom: 10px;
+}
+.fp_row li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#top_other {
+    margin-left: -5px;
+    margin-right: -15px;
+}
+#fp_online_content p {
+    margin-bottom: 5px;
+}
+#fp_latest_mm .photo {
+    width: 128px;
+}
+#fp_mam_ad {
+    border-top: 1px dotted #009830;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+#fp_mam_ad p {
+    font-size: 9pt;
+}
+#fp_mam_ad a {
+    color: #666;
+}
+#fp_mam_ad a:hover {
+    color: #999;
+}
+.fp_section_refer {
+    text-align: right;
+    margin: 5px 10px;
+}
+#fp_section_articles {
+    border-right: 1px dotted #009830;
+}
+.top_article p {
+    margin: 0;
+}
+#fp_latest_blog_posts img {
+    width: 300px;
+}
+
+/* calendar */
+#fp_calendar {
+    margin: -10px !important;
+    padding: 10px;
+    margin-top: 0 !important;
+    padding-top: 0;
+    list-style: none !important;
+}
+#fp_calendar p {
+    margin-bottom: 5px;
+}
+#fp_calendar .calendar_time_place {
+    font-style: italic;
+}
+#fp_calendar ul {
+    list-style: none;
+    margin-left: 0px;
+}
+
+/* other specific pages */
+.related_sidebar ul {
+    list-style: disc inside;
+}
+.related_sidebar {
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #009830;
+}
+#scores_sidebar {
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #009830;
+}
+#scores_sidebar h3 {
+    text-align: center;
+    font-weight: normal;
+}
+#scores_sidebar .last_updated {
+    text-align: center;
+    font-style: italic;
+    font-size: 8pt;
+}
+.scoreboard {
+    margin-right: 10px;
+}
+.scoreboard thead {
+    font-weight: bold;
+}
+.scoreboard .even {
+    background-color: #ccc;
+}
+.scoreboard .odd {
+    background-color: #fff;
+}
+.scoreboard td {
+    padding: 5px;
+}
+.vcard .geo, .bubble .geo {
+    display: none;
+}
+.bubble {
+    /* display: block;
+    position: relative; */
+    width: 200px;
+}
+#map_box {
+    margin-bottom: 10px;
+}
+.mugshot {
+    background-color: #fff;
+    padding: 0 5px 0 10px;
+    margin: 0;
+    float: right;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.won {
+    background-color: #ccffcc;
+}
+#results th, .results th {
+    text-align: left;
+    padding-top: 5px;
+    margin-top: 5px;
+}

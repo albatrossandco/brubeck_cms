@@ -1,0 +1,377 @@
+#infocontainer {
+    /*background-color: #F5F5F5;*/
+    padding-left: 10px;
+}
+
+#infocontainer p {
+    font-size: 12px;
+	margin-bottom: 9px;
+}
+
+#infocontainer p.description {
+    font-size: 13px;
+}
+
+#underline {
+    background-color: #009830;
+	height: 4px;
+	/*margin-bottom: 10px;*/
+}
+
+#imagecontainer {
+	float: left;
+	height: 70px;
+	padding-bottom: 20px;
+	width: 110px;
+}
+
+#imagecontainer img {
+    border: 1px solid #BBB;
+    margin: 0 20px 0 0;
+	/*width: 200px;*/
+}
+
+h1.apt-name {
+    margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+#nav_bar {
+	margin-bottom: 10px;
+}
+
+.landlord {
+	/*background-color: #EFEFEF;*/
+	/*border-left: 1px dotted #336633;*/
+	/*color:  #444444;*/
+	font-size: 12px;
+	line-height: 1.1;
+	margin-bottom: 20px;
+	/*margin-left: 220px;*/
+	/*padding: 0px 0px 0px 9px;*/
+	/*width: 140px;*/
+}
+
+.landlord p {
+	margin-bottom: 7px;
+}
+
+.landlord-inner {
+	width: 210px;
+}
+
+.ctltitle {
+	/*color: #444444;*/
+	font-size: 19px;
+	/*text-align: center;*/
+	text-decoration: underline;
+}
+
+.llname {
+	font-size: 16px;
+}
+
+#map {
+	float: right;
+	width: 240px;
+}
+
+#map_box {
+	margin-right: 0px;
+}
+#photos-caption {
+    /*color:#444444;*/
+    font-size:18px;
+    margin:9px 0;
+	text-align: center;
+}
+span.parenthetical {
+    color: #888888;
+	font-size: 12px;
+}
+a.group {
+	width: 110px;
+}
+.photoline {
+	width: 220px;
+}
+#apt-info {
+	border-right: 1px dotted #336633;
+	margin-bottom: 10px;
+	margin-right: 0px;
+	padding-right: 9px;
+}
+#incident_info .note {
+	display: none;
+}
+.bubble .note {
+	display: block;
+}
+.free {
+        background-color: #FFFFFF;
+        border: 1px solid #AAAAAA;
+        color: #AAAAAA;
+}
+.paid {
+	background-color: #DDDDDD;
+	color: #777777;
+}
+.premium {
+	background-color: #BBDDBB;
+	color: #336633;
+}
+
+h1 .listingtype {
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 5px;
+	padding: 5px 10px;
+	vertical-align: middle;
+}
+#fancy_outer {
+	padding-top: 10px;
+}
+#listingphoto {
+	margin-left: 9px;
+}
+#listingblock {
+/*	background-color: #CCCCCC;*/
+	font-size: 11px;
+	margin: 0px;
+	width: 480px;
+}
+#listingblock h2.nolistings {
+    background-color: #CCCCCC;
+    margin-bottom: 0px;
+	padding: 10px;
+}
+.bigfield {
+	/*float: right;*/
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 5px;
+	/*width: 90px;*/
+}
+
+.sqft {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.bedbathnumber {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.bedbathcaption {
+	font-size: 10px;
+}
+
+#rentbox {
+	margin-right: 9px;
+	width: 70px;
+}
+
+#rentbox p {
+	margin-bottom: 5px;
+}
+#entry {
+	margin: 0px 0px 3px;
+    padding: 9px 0px 4px;
+	width: 478px;
+}
+.premiumlisting {
+	background-color: #BBDDBB;
+	border: 1px solid #BBBBBB;
+}
+.paidlisting {
+	background-color: #EEEEEE;
+	border: 1px solid #CCCCCC;
+}
+.freelisting {
+        background-color: #FFFFFF;
+        border: 1px solid #DDDDDD;
+}
+#entry img {
+	border: 1px solid #BBBBBB;
+}
+p.entrytype {
+	margin: 6px 0px 0px;
+}
+
+#navigation {
+	padding-right: 10px;
+	width: 210px;
+}
+
+#navigation h2 {
+	
+}
+
+#navigation h3 {
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	/* background: #336633 url(http://www.themaneater.com/media/style/2009-07/images/maneater/expandcollapse.png) no-repeat scroll 95% center; */
+	background-color: #336633;
+	border-bottom: 1px solid #333333;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	padding: 7px 10px 3px;
+}
+
+#navigation .boxcontainer {
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	background-color: #CCCCCC;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-top: 1px solid #666666;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#navigation .choicesboxcontainer {
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	background-color: #EFEFEF;
+	border-bottom: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-top: 1px solid #666666;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+#navigation ul {
+
+}
+
+#navigation ul.choices {
+	background-color: #EFEFEF;
+}
+
+#navigation h3 a {
+	color: #FFFFFF;
+}
+
+#navigation h3 a:hover {
+	color: #CCCCCC;
+}
+
+#navigation input#aptsearchsubmit, #navigation input#aptsearchclear {
+	/*-moz-border-radius: 5px;*/
+	/*-webkit-border-radius: 5px;*/
+	/*background-color: #CCCCCC;*/
+	/*border: 1px solid #999999;*/
+	/*color: #000000;*/
+	float: left;
+	/*font-weight: normal;*/
+	margin-bottom: 10px;
+	margin-top: 10px;
+	/*padding: 0px;*/
+	width: 100px;
+}
+
+#navigation input#aptsearchsubmit {
+	margin-right: 8px;
+}
+
+#navigation h3.aptguideclear a {
+	color: #000;
+}
+
+#box0, #box2, #box3, #box4, #box5, #box6, #box7, #box8, #box9, #boxb, #boxc, #boxd {
+	display: none;
+}
+
+#archiveright {
+	width: 710px;
+}
+
+#header {
+	padding-bottom: 5px;
+}
+
+#header h1 {
+	font-size: 39px;
+	text-align: center;
+}
+
+#landlord_info {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	background-color: #EFEFEF;
+	border: 1px solid #BBBBBB;
+	margin: 0px 0px 10px;
+	padding: 9px;
+}
+
+#landlord_info p {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#entryheader {
+	-moz-border-radius: 5px 5px 0px 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	background-color: #DDDDDD;
+	border: 1px solid #BBBBBB;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	padding: 6px 9px;
+}
+
+#entryfooter {
+	-moz-border-radius: 0px 0px 5px 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	background-color: #DDDDDD;
+	border: 1px solid #BBBBBB;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	padding: 6px 9px;
+}
+
+#mapbox {
+	float: none;
+}
+
+h2.section {
+	width: 210px;
+}
+
+p.unavailable {
+	background-color: #CCCCCC;
+	border-bottom: 1px solid #BBBBBB;
+	border-top: 1px solid #BBBBBB;
+	color: #555555;
+	padding: 2px 0px;
+	text-align: center;
+}
+
+p.multiavailable {
+	background-color: #99BB99;
+	border-bottom: 1px solid #88AA88;
+	border-top: 1px solid #88AA88;
+	color: #333333;
+	padding: 2px 0px;
+	text-align: center;
+}
