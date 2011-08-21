@@ -17,6 +17,7 @@ class SectionAdmin(admin.ModelAdmin):
         })
     )
     list_display = ('name', 'publication', 'priority', 'is_archived')
+    prepopulated_fields = {'slug': ('title',)}
 admin.site.register(Section, SectionAdmin)
 
 admin.site.register(Volume)

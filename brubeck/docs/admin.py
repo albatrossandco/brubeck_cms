@@ -11,6 +11,7 @@ class BookTypeAdmin(admin.ModelAdmin):
             'fields': ('slug',)
         })
     )
+    prepopulated_fields = {'slug': ('title',)}
 admin.site.register(BookType)
 
 class BookAdmin(admin.ModelAdmin):
@@ -30,6 +31,7 @@ class BookAdmin(admin.ModelAdmin):
         }),
     )
     filter_horizontal = ('contributors', 'publication', 'site', 'volume')
+    prepopulated_fields = {'slug': ('title',)}
 admin.site.register(Book, BookAdmin)
 
 class EntryAdmin(admin.ModelAdmin):
@@ -45,6 +47,7 @@ class EntryAdmin(admin.ModelAdmin):
             'fields': ('slug',)
         })
     )
+    prepopulated_fields = {'slug': ('title',)}
 admin.site.register(Entry, EntryAdmin)
 
 admin.site.register(Example)

@@ -19,6 +19,7 @@ class StafferAdmin(admin.ModelAdmin):
     )
     inlines = (TenureInline,)
     list_display = ('last_name', 'first_name', 'middle_name', 'email')
+    prepopulated_fields = {'slug': ('title',)}
 admin.site.register(Staffer, StafferAdmin)
 
 admin.site.register(Position)

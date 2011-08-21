@@ -29,7 +29,8 @@ class ArticleAdmin(admin.ModelAdmin):
     inlines = (CorrectionInline)
     list_display = ('title', 'pub_date', 'section', 'is_published', 'priority')
     list_editable = ('priority', 'is_published')
-    list_filter = ('is_published',),
+    list_filter = ('is_published',)
+    prepopulated_fields = {'slug': ('title',)}
     raw_id_fields = ('byline',)
     search_fields = ('title', 'body', 'cdeck', 'blurb')
 admin.site.register(Article)
