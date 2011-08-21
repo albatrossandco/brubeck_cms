@@ -1,5 +1,6 @@
 # Imports from Django
 from django import template
+from django.conf import settings
 from django.core.cache import cache
 
 # Imports from maneater
@@ -20,5 +21,6 @@ def render_weather_graphic():
         except:
             weather = None
     return {
+        'MEDIA_URL': settings.MEDIA_URL,
         'weather': weather
     }
