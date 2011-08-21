@@ -1,7 +1,7 @@
 {% extends "base.html" %} {% load markup %} {% load comparison %} {% block title %}{{ block.super }} &ndash; {% if calendar %}{{ calendar }} &ndash;{% else %}All events for{% endif %} {{ month_name }} {{ year }}
 {% endblock title %}
 {% block head_extras %}
-<link rel="stylesheet" type="text/css" href="/media/style/2009-05/style/calendar.css" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2009-05/style/calendar.css" />
 {% endblock head_extras %}
 {% block content_wide %}
 

@@ -4,7 +4,7 @@
 {% block title %}{{ block.super }} &ndash; Multimedia{% comment %}{% ifnotequal object.mediatype "audioclip" %}{{ object.mediatype }}{% else %}Audio clip{% endifnotequal %}s &ndash; {{ object }}{% endcomment %}{% endblock title %}
 
 {% block head_extras %}
-<link rel="stylesheet" type="text/css" href="/media/style/2009-07/style/generalstylechanges.css" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2009-07/style/generalstylechanges.css" />
 {% endblock head_extras %}
 
 {% block rss_link %}http://www.themaneater.com/media/style/2009-07/images/maneater/rss_20.png{% endblock rss_link %}

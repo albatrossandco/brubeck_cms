@@ -1,8 +1,8 @@
 {% extends "base.html" %} {% load markup %} {% load comparison %} {% block title %}{{ block.super }} &ndash; {% if channel %}{{ channel }} &ndash;{% else %}All podcast episodes from{% endif %} {{ month_name }} {{ year }}
 {% endblock title %}
 {% block head_extras %}
-{% ifequal site.id 1 %}<link rel="stylesheet" type="text/css" href="/media/style/2009-06/style/maneatercalendar.css" />{% endifequal %}
-{% ifequal site.id 2 %}<link rel="stylesheet" type="text/css" href="/media/style/2009-06/style/movecalendar.css" />{% endifequal %}
+{% ifequal site.id 1 %}<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2009-06/style/maneatercalendar.css" />{% endifequal %}
+{% ifequal site.id 2 %}<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2009-06/style/movecalendar.css" />{% endifequal %}
 {% endblock head_extras %}
 {% block content %}
 

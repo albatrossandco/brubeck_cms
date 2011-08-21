@@ -4,8 +4,8 @@
 {% block title %}{{ block.super }} &mdash; {{ flatpage.title }}{% endblock title %}
 
 {% block head_extras %}
-    <link rel="stylesheet" type="text/css" href="/media/style/2010-10/style/bx_styles.css" />
-    <script type="text/javascript" src="/media/style/2010-10/js/jquery.bxSlider.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2010-10/style/bx_styles.css" />
+    <script type="text/javascript" src="{{ MEDIA_URL }}style/2010-10/js/jquery.bxSlider.js"></script>
     <style>
     body {
     	background: #D8C7AA url("/media/style/2010-10/images/homecomingbg.jpg") no-repeat scroll center 0;
@@ -36,10 +36,10 @@
 {% endblock %}
 
 {% block content_wide %}
-<img id="logo" src="/media/style/2010-10/images/logo.png" alt="Tradition set in stone" />
+<img id="logo" src="{{ MEDIA_URL }}style/2010-10/images/logo.png" alt="Tradition set in stone" />
 <ul id="slider">
     <li>
-        <img class="photo" src="/media/style/2010-10/images/articles.jpg" alt="Articles" />
+        <img class="photo" src="{{ MEDIA_URL }}style/2010-10/images/articles.jpg" alt="Articles" />
         <h2>Articles</h2>
     </li>
     <li>

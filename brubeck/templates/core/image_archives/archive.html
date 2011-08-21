@@ -7,7 +7,7 @@
 {% if section %}
 <link rel="alternate" type="application/rss+xml" title="{{ section.name }} RSS Feed" href="/feeds/sections/{{ section.slug }}/" />
 {% endif %}
-<link rel="stylesheet" type="text/css" href="/media/style/2010-09/style/sectionheads.css" />
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2010-09/style/sectionheads.css" />
 {% endblock head_extras %}
 
 {% block content %}

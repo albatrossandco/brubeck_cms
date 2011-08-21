@@ -8,7 +8,7 @@
 {% ifequal graphic_type "scatterplot" %}{% render_scatter_plot_js graphic.scatterplot %}{% endifequal %}
 {% ifequal graphic_type "timeline" %}
 {% comment %}
-<script type="text/javascript" src="/media/style/2009-01/js/easySlider.packed.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}style/2009-01/js/easySlider.packed.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
     $('#chart-container').easySlider({
@@ -18,7 +18,7 @@ $(document).ready(function(){
 });
 </script>
 {% endcomment %}
-<script type="text/javascript" src="/media/style/2010-10/js/jquery.tinyscrollbar.min.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}style/2010-10/js/jquery.tinyscrollbar.min.js"></script>
 <script type="text/javascript">
 <!--
 

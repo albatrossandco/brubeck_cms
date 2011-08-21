@@ -3,9 +3,9 @@
 {% block title %}{{ block.super }} &ndash; Polls &ndash; {{ poll }}{% endblock title %}
 
 {% block head_extras %}
-    <script src="/media/style/2010-09/graphing/raphael-min.js" type="text/javascript"></script>
-    <![if !IE]><script src="/media/style/2010-09/graphing/poll.js" type="text/javascript"></script><![endif]>
-    <![if !IE]><script src="/media/style/2010-09/graphing/poll.css" type="text/javascript"></script><![endif]>
+    <script src="{{ MEDIA_URL }}style/2010-09/graphing/raphael-min.js" type="text/javascript"></script>
+    <![if !IE]><script src="{{ MEDIA_URL }}style/2010-09/graphing/poll.js" type="text/javascript"></script><![endif]>
+    <![if !IE]><script src="{{ MEDIA_URL }}style/2010-09/graphing/poll.css" type="text/javascript"></script><![endif]>
     <![if !IE]><style type="text/css" media="screen">
         #holder {
             height: {{ results.chart_height }}px;

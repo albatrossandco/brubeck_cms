@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load core %}{% load markup %}{% load advertising %}{% load thumbnail %}{% load comparison %}
 
-{% block head_extras %}	<link rel="stylesheet" type="text/css" href="/media/style/2011-01/style/frontpage.css" />
+{% block head_extras %}	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2011-01/style/frontpage.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" ></script>
-    <script type="text/javascript" src="/media/style/2010-02/js/curvycorners.js" ></script>
-	<link rel="stylesheet" type="text/css" href="/media/style/2009-07/js/calendaring.css" />
-	<link rel="stylesheet" type="text/css" href="/media/style/2009-07/style/generalstylechanges.css" />
+    <script type="text/javascript" src="{{ MEDIA_URL }}style/2010-02/js/curvycorners.js" ></script>
+	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2009-07/js/calendaring.css" />
+	<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2009-07/style/generalstylechanges.css" />
     <script type="text/javascript">
         $(function(){  
             $("#top-stories{% if news_bursts %}-newsburst-fix{% endif %}").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);  
@@ -337,7 +337,7 @@
     </div>
     <div id="fp_square_ad" class="grid_4 omega">
         <p style="color: #BBBBBB; font-size: 10px; text-align: center; text-transform: uppercase;">Advertisement</p>
-        <a href="http://www.columbiaprowl.com"><img alt="Columbia Prowl" src="/media/2010/0602/prowlad-large.png" style="border: 1px dotted #BBBBBB;" /></a>
+        <a href="http://www.columbiaprowl.com"><img alt="Columbia Prowl" src="{{ MEDIA_URL }}2010/0602/prowlad-large.png" style="border: 1px dotted #BBBBBB;" /></a>
     </div>
 </div>
 <div id="ad_bar" class="grid_12 fp_row">

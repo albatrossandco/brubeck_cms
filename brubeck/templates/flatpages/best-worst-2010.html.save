@@ -9,9 +9,9 @@ aaaa
 {% block title %}{{ block.super }} &mdash; {{ flatpage.title }}{% endblock title %}
 
 {% block head_extras %}
-<script type="text/javascript" src="/media/style/2010-04/js/jquery.easing.js"></script>
-<script type="text/javascript" src="/media/style/2010-04/js/jquery.fancybox.js"></script>
-<link rel="stylesheet" type="text/css" href="/media/style/2010-04/js/fancybox.css" />
+<script type="text/javascript" src="{{ MEDIA_URL }}style/2010-04/js/jquery.easing.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}style/2010-04/js/jquery.fancybox.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}style/2010-04/js/fancybox.css" />
 <script type="text/javascript">
     $(document).ready(function()
     {
@@ -322,7 +322,7 @@ p.photo_cutline {
 
 <div id="profiles-row-1" class="grid_3 alpha">
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile1"><img src="/media/2010/0503/photos/best-worst/joseph_beeman-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile1"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/joseph_beeman-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -335,7 +335,7 @@ p.photo_cutline {
     </div>
 
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile2"><img src="/media/2010/0503/photos/best-worst/tinacasagrand-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile2"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/tinacasagrand-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -349,7 +349,7 @@ p.photo_cutline {
 </div>
 <div id="profiles-row-2" class="grid_3 alpha">
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile3"><img src="/media/2010/0503/photos/best-worst/erinhorth-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile3"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/erinhorth-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -362,7 +362,7 @@ p.photo_cutline {
     </div>
 
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile4"><img src="/media/2010/0503/photos/best-worst/Joekarl-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile4"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/Joekarl-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -379,7 +379,7 @@ p.photo_cutline {
 </div>
 <div id="profiles-row-3" class="grid_3 alpha">
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile5"><img src="/media/2010/0503/photos/best-worst/ian_krause-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile5"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/ian_krause-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -391,7 +391,7 @@ p.photo_cutline {
     </div>
 
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile6"><img src="/media/2010/0503/photos/best-worst/tim_noce-gaffe-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile6"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/tim_noce-gaffe-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -405,7 +405,7 @@ p.photo_cutline {
 </div>
 <div id="profiles-row-4" class="grid_3 alpha">
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile7"><img src="/media/2010/0503/photos/best-worst/jordan_paul-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile7"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/jordan_paul-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -416,7 +416,7 @@ p.photo_cutline {
     </div>
 
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile8"><img src="/media/2010/0503/photos/best-worst/Daniel_Sewell-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile8"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/Daniel_Sewell-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -429,7 +429,7 @@ p.photo_cutline {
 </div>
 <div id="profiles-row-5" class="grid_3 alpha">
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile9"><img src="/media/2010/0503/photos/best-worst/weatherspoon-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile9"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/weatherspoon-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">
@@ -442,7 +442,7 @@ p.photo_cutline {
     </div>
 
     <div class="profile grid_1 alpha">
-        <a class="profiles" href="#profile10"><img src="/media/2010/0503/photos/best-worst/Greg_Winegar-thumb.jpg" alt="" /></a>
+        <a class="profiles" href="#profile10"><img src="{{ MEDIA_URL }}2010/0503/photos/best-worst/Greg_Winegar-thumb.jpg" alt="" /></a>
     </div>
 
     <div style="display: none;">

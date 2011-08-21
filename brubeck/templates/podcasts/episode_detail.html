@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load markup %}{% load core %}{% load comments %}
 {% block head_extras %}
-<script src="/media/style/2009-09/js/jPlayer/jplayer.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}style/2009-09/js/jPlayer/jplayer.js" type="text/javascript"></script>
 <script>
 $(document).ready(function() {
     $("#jPlayer").jPlayer( {
