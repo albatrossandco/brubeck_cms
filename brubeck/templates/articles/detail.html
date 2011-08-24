@@ -130,7 +130,7 @@
             {% for image in images %}
             <li class="photo_container">
                 <a href="{{ image.get_absolute_url }}"><img class="photo" src="{% thumbnail image.image 200x200 %}" alt="Image" /></a>
-                <p class="byline">{% if image.illustration %}Photo illustration by {% endif %}{% ifequal image.mediatype 'editorialcartoon' %}Illustration by {% endifequal %}{% if image.byline %}<a href="{{ image.byline.get_absolute_url }}">{{ image.byline }}</a>{% ifnotequal image.mediatype 'editorialcartoon' %}/{% ifequal image.mediatype "photo" %}{{ image.byline.photographer_position }}{% else %}Graphic Designer{% endifequal %}{% endifnotequal %}</span>{% else %}{% if image.static_byline %}{{ image.static_byline }}{% endif %}{% endif %}</p>
+                <p class="byline">{% if image.illustration %}Photo illustration by {% endif %}{% ifequal image.mediatype 'editorialcartoon' %}Illustration by {% endifequal %}{% if image.byline.all %}<a href="{{ image.byline.all.0.get_absolute_url }}">{{ image.byline.all.0 }}</a>{% ifnotequal image.mediatype 'editorialcartoon' %}/ {% ifequal image.mediatype "photo" %}Photographer{% else %}Graphic Designer{% endifequal %}{% endifnotequal %}</span> {% else %}{% if image.static_byline %}{{ image.static_byline }}{% endif %}{% endif %}</p>
                 {{ image.cutline|markdown }}
             </li>
             {% endfor %}

@@ -20,6 +20,7 @@ python-digest==1.7
 recaptcha-client==1.0.6
 reportlab==2.4
 sorl-thumbnail==3.2.5
+template_utils==0.4p2
 tweepy==1.7.1
 twitter==1.6.1
 wsgiref==0.1.2

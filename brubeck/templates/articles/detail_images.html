@@ -17,7 +17,7 @@
         {% for image in images %}
             <li class="photo_container">
                 <img class="photo" alt="{{ entry }}" src="{{ image.image.url }}" />
-                <p class="byline">{% if image.illustration %}Photo illustration by {% endif %}{% if image.byline %}<a href="{{ image.byline.get_absolute_url }}">{{ image.byline }}</a>/{{ image.byline.photographer_position }}</span>{% else %}{% if image.static_byline %}{{ photo.static_byline }}{% endif %}{% endif %}</p>
+                <p class="byline">{% if image.illustration %}Photo illustration by {% endif %}{% if image.byline.all %}<a href="{{ image.byline.all.0.get_absolute_url }}">{{ image.byline.all.0 }}</a>/Photographer</span>{% else %}{% if image.static_byline %}{{ photo.static_byline }}{% endif %}{% endif %}</p>
                 {{ image.cutline|markdown }}
             </li>
         {% endfor %}

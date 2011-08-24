@@ -387,6 +387,7 @@ def gallery_setup(gallery_id, size="large"):
     try:
         return {
             'gallery_id': gallery_id,
+            'MEDIA_URL': settings.MEDIA_URL,
             'size': size
         }
     except:

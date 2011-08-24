@@ -18,7 +18,8 @@ from django.core.files import File
 from django.contrib.gis.db import models
 from django.utils import simplejson
 
-# Imports from maneater
+# Imports from brubeck
+from brubeck.core import imaging
 from brubeck.core.models import Content
 
 # Imports from other sources

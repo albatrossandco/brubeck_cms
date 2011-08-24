@@ -141,4 +141,4 @@ def detail(request, year=None, month=None, day=None, id=None, mediatype=None):
         'image': image
     }
     
-    return render_to_response('core/image_archives/detail.html', page, context_instance=RequestContext(request))
+    return render_to_response('photography/image_detail.html', page, context_instance=RequestContext(request))
