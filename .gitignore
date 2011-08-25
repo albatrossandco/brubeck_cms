@@ -1,5 +1,5 @@
 *.pyc
 *.pyo
 .DS_Store
-settings.py
+local_settings.py
 brubeck.wsgi
