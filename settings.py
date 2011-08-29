@@ -205,6 +205,16 @@ DEFAULT_METAR_STATION = "KCOU"
 YOUTUBE_API_KEY = ''
 YOUTUBE_CLIENT_ID = ''
 
+# Attempts to publish PDFs of print issues to Issuu require the use of 
+# an Issuu API key and secret key. For more information, see 
+# http://issuu.com/services/api/
+ISSUU_API_KEY = ''
+ISSUU_SECRET_KEY = ''
+
+# Comment moderation requires the use of a TypePad AntiSpam API key. Get 
+# one at http://antispam.typepad.com/info/get-api-key.html
+TYPEPAD_ANTISPAM_API_KEY = ''
+
 # This should allow users to override any of these settings as desired.
 try:
     from local_settings import *

@@ -20,6 +20,8 @@ class AkismetModerator(CommentModerator):
         
         if base_url is not None:
             ak.baseurl = base_url
+        else:
+            ak.baseurl = 'api.antispam.typepad.com/1.1/'
         
         if ak.verify_key():
             data = {
@@ -37,7 +39,7 @@ class AkismetModerator(CommentModerator):
     
     def allow(self, comment, content_object, request):
         allow = super(AkismetModerator, self).allow(comment, content_object, request)
-        spam = self.check_spam(request, comment, key=settings.AKISMET_API_KEY)
+        spam = self.check_spam(request, comment, key=settings.TYPEPAD_ANTISPAM_API_KEY)
         
         return not spam and allow
         
