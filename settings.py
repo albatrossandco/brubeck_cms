@@ -199,6 +199,12 @@ EDITORS = {
 # for examples.
 DEFAULT_METAR_STATION = "KCOU"
 
+# Attempts to upload videos using YouTube require the use of a YouTube 
+# API key. Get one at http://code.google.com/apis/youtube/dashboard/ and 
+# choose an arbitrary client ID to identify your installation.
+YOUTUBE_API_KEY = ''
+YOUTUBE_CLIENT_ID = ''
+
 # This should allow users to override any of these settings as desired.
 try:
     from local_settings import *
