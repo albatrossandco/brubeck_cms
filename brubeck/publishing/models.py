@@ -86,7 +86,7 @@ class Issue(models.Model):
     """
     volume = models.ForeignKey(Volume, db_index=True)
     issue_id = models.PositiveIntegerField('issue number', db_index=True, blank=True, null=True, help_text="Fill this in unless this is an online update set.")
-    pub_date = models.DateTimeField(db_column='date', help_text="When was this issue published?")
+    pub_date = models.DateTimeField('date published', db_column='date', help_text="When was this issue published?")
     online_update = models.BooleanField(default=False, help_text="Is this actually a set of online updates instead of an issue?")
     old_archive = models.BooleanField(default=False, help_text="Is this an imported set of articles from the old (PHP) site? (Should never be checked for new issues.)")
     # FIXME: This had null=True in the 2008 site. Change this in the database.

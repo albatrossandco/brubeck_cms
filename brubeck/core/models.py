@@ -28,7 +28,7 @@ class ContentChannel(Category):
         return self.name
 
 class Content(models.Model):
-    pub_date = models.DateTimeField()
+    pub_date = models.DateTimeField('date published')
     is_published = models.BooleanField(default=False, help_text="Whether or not visitors can see this content. Uncheck if this content is still being edited.")
     byline = models.ManyToManyField(Staffer, blank=True, null=True, help_text="Use this if this content was the work of one or more normal staffers.")
     static_byline = models.CharField(max_length=255, blank=True, null=True, help_text="Use this in the case that this is contributed content (from a reader, a record label, a film studio, etc.). If there is a staffer byline, this static byline is ignored.")

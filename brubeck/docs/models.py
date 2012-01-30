@@ -23,7 +23,7 @@ class Book(ContentChannel):
     introductory_message = models.TextField(blank=True, null=True)
     is_update = models.BooleanField()
     pdf = models.FileField(upload_to='manuals/%Y-%m', blank=True, null=True)
-    pub_date = models.DateField(auto_now_add=True)
+    pub_date = models.DateField('date published', auto_now_add=True)
     publication = models.ManyToManyField(Publication, null=True)
     site = models.ManyToManyField(Site, null=True)
     type = models.ForeignKey(BookType)
