@@ -1,5 +1,6 @@
 *.pyc
 *.pyo
+*.sublime-*
 .DS_Store
 local_settings.py
 brubeck.wsgi
